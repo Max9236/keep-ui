@@ -9,7 +9,6 @@ import keSearchBox from './keep-ui/ke-search-box.vue'
 Vue.component("ke-search-box",keSearchBox)
 
 
-
 Vue.config.productionTip = false
 
 new Vue({

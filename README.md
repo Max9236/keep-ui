@@ -25,9 +25,24 @@ keepUI ,一套基于 Vue 2.0 简约而不简单的webPC端组件库
 
 
 
+## 引入方式：按需引入
+
+1. **将src/keep-ui的文件引入到自己的项目中**
+
+2. **在main.js中进行如下引入：**
+
+```js
+import keSearchBox from './keep-ui/ke-search-box.vue'
+...
+//注册成全局组件，即可开始使用
+Vue.component("ke-search-box",keSearchBox)
+...
+```
+
+
 ##  Input 输入框
 
-### 搜索框
+### 搜索框  `ke-search-box`
 
 ```html
 	<ke-search-box 
