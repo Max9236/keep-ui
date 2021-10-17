@@ -4,9 +4,13 @@ import router from './router'
 
 import './assets/css/global.css'
 
-import keSearchBox from './keep-ui/ke-search-box.vue'
+import KeSearchBox from './keep-ui/ke-search-box.vue'
+import KeButton from './keep-ui/ke-button.vue'
+import KeDialog from './keep-ui/ke-dialog.vue'
 
-Vue.component("ke-search-box",keSearchBox)
+Vue.component("ke-search-box",KeSearchBox)
+Vue.component(KeButton.name,KeButton)
+Vue.component(KeDialog.name,KeDialog)
 
 
 Vue.config.productionTip = false

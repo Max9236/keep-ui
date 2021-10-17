@@ -7,7 +7,8 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
+    "core-js": "^3.18.3",
+    "node-sass": "^4.14.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },
@@ -15,9 +16,7 @@
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "less-loader": "6.0.0",
-    "sass-loader": "^12.2.0",
-    "style-loader": "^3.3.0",
+    "sass-loader": "^7.3.1",
     "vue-template-compiler": "^2.6.11"
   }
 }
