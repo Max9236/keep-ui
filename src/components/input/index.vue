@@ -1,23 +1,26 @@
 <template>
   <div>
     <h2>Input 输入框</h2>
-    <h3>搜索框</h3>
-    <!-- ke-search-box 组件 -->
-    <ke-search-box @search="handleListSearch('参数',$event)" @list-click="handleListClick('参数',$event)"/>
-    <!-- 
-      如果写默认@search="handleListSearch"，则会自动接收一个事件参数$event（由子组件传递过来的）
-      如果希望给handleListSearch传入参数，则需要显式的写上$event -> @search="handleListSearch('参数',$event)"
-    
-     -->
-    <div class="btnShow" @click="handleShow">显示代码</div>
-    <pre v-show="isShow"><code class='language-html' lang='html'>	&lt;ke-search-box 
-      @list-click=&quot;handleListClick&quot;
-      @focus=&quot;handleListFocus($event)&quot;
-      @blur=&quot;handleListBlur($event)&quot;
-      @search=&quot;handleListSearch($event)&quot; 
-	/&gt;
-</code></pre>
-    <h3>Input Attributes</h3>
+    <h3>#搜索框</h3>
+    <!-- 组件及代码块 -->
+    <div class="block">
+      <div class="block-show">
+        <ke-search-box @search="handleListSearch('参数',$event)" @list-click="handleListClick('参数',$event)"/>
+      </div>
+      <div class="btnShow" @click="isShow = !isShow">显示代码</div>
+      <transition name="run">
+        <mavon-editor
+        v-show="isShow"
+        v-model="value"
+        defaultOpen="preview"
+        :toolbarsFlag="false"
+        :subfield="false"
+        :boxShadow="false"
+        />
+      </transition>
+    </div>
+    <!-- 说明相关 -->
+    <h3>#Input Attributes</h3>
     <figure>
       <table>
         <thead>
@@ -34,7 +37,7 @@
         </tbody>
       </table>
     </figure>
-    <h3>Input Events</h3>
+    <h3>#Input Events</h3>
     <figure>
       <table>
         <thead>
@@ -75,13 +78,18 @@
 export default {
   data() {
     return {
-      isShow:false
+      isShow:false,
+      value: `
+\`\`\`html        
+<ke-search-box @search="handleListSearch('参数',$event)" @list-click="handleListClick('参数',$event)"/>
+<!-- 
+  如果写默认@search="handleListSearch"，则会自动接收一个事件参数$event（由子组件传递过来的）
+  如果希望给handleListSearch传入参数，则需要显式的写上$event -> @search="handleListSearch('参数',$event)"
+-->
+\`\`\``,
     }
   },
   methods: {
-    handleShow(){
-      this.isShow = !this.isShow
-    },
     handleListSearch(e, e2){
       console.log("搜索",e, e2);
     },
@@ -94,14 +102,5 @@ export default {
 
 <style lang="scss" scoped>
 @import url('../../assets/css/md.css');
-.btnShow {
-  margin-top: 10px;
-  width: 30%;
-  height: 30px;
-  background-color: skyblue;
-  border-radius: 5px;
-  text-align: center;
-  line-height: 30px;
-  cursor: pointer;
-}
+
 </style>

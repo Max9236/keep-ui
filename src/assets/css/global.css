@@ -16,3 +16,76 @@ body{
  } 
 }
 
+/* 代码块 */
+.v-note-show.single-show {
+  border: none;
+}
+.hljs {
+  margin: 15px;
+  font-size: 20px;
+  padding: 10px!important;
+}
+.lang-html {
+  position: relative;
+  left: 2%;
+  transform: translateX(50%);
+}
+.v-note-wrapper {
+  min-height: 0px!important;
+  width: 100%;
+}
+.v-show-content.scroll-style.scroll-style-border-radius {
+  padding: 0!important;
+
+}
+pre {
+  padding: 0!important;
+  margin: 0!important;
+}
+
+
+/* 动画 */
+.run-enter-active {
+  animation: fade 0.5s;
+}
+
+.run-leave-active {
+  animation: fade 0.5s reverse;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 组件示例 */
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid rgba(158, 154, 154, .2);
+}
+.block-show {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.btnShow {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border-top:1px solid rgba(204, 221, 228, .5); 
+  border-bottom:1px solid rgba(204, 221, 228, .5); 
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.margin {
+  margin: 0 10px;
+}

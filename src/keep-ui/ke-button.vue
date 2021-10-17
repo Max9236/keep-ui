@@ -248,7 +248,6 @@ $danger-active-color: #f78989;
 }
 .r-button.round {
   border-radius: 20px;
-  padding: 8px 23px;
 }
 // 圆形按钮
 .r-button.circle,
