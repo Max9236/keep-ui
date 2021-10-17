@@ -33,7 +33,7 @@
       },
       handleClick(e){
         this.inputVal = e.toElement.innerText;
-        this.$emit("list-click",e);
+        this.$emit("list-click",{e,newsVal:this.inputVal});
       },
       handleSeach(e){
         let newsVal = this.inputVal.trim();
@@ -45,7 +45,7 @@
           }
           this.inputVal = ''
         }
-        this.$emit('search',e);
+        this.$emit('search',{e, newsVal});
       },
       isRepeat(arr, item) {
         //  some返回一个布尔值，相对于 || 有一个真则为真
@@ -58,7 +58,7 @@
   }
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .container {
   width: 300px;
   display: flex;
