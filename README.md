@@ -15,15 +15,12 @@ yarn serve
 yarn build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 
 ## keepUI 
 
 keepUI ,一套基于 Vue 2.0 简约而不简单的webPC端组件库
 
-
+[keepUI展示地址:http://www.hrjblog.top/keepui](http://www.hrjblog.top/keepui).
 
 ## 引入方式：按需引入
 
