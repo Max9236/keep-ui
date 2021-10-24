@@ -17,7 +17,9 @@ import CodeBlock from './components/codeblock'
 Vue.use(mavonEditor)
 
 
+
 Vue.component("ke-search-box",KeSearchBox)
+
 Vue.component(KeButton.name,KeButton)
 Vue.component(KeDialog.name,KeDialog)
 Vue.component("CodeBlock",CodeBlock)
