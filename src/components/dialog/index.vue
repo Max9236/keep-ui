@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>#模态框</h3>
+    <h3 id="modalBox">#模态框</h3>
     <CodeBlock :value="value">
       <ke-button class="margin" type="primary" @click="visible=true" round>点击弹出模态框</ke-button>
       <ke-dialog :visible.sync="visible">

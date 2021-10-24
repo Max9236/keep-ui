@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <SideBar :dataList="dataList" />
     <h1>keepUI</h1>
     <h3>#keepUI ,一套基于 Vue 2.0 简约而不简单的webPC端组件库</h3>
     <DialogGroup />
@@ -12,23 +13,204 @@
 import InputGroup from "./components/input";
 import ButtonGroup from "./components/button";
 import DialogGroup from "./components/dialog";
-
+import SideBar from "./components/sidebar";
 export default {
   components: {
     InputGroup,
     ButtonGroup,
     DialogGroup,
+    SideBar,
   },
   data() {
     return {
-      value:`\`\`\`html        
-      <ke-button class="margin">默认</ke-button>
-      <ke-button class="margin" type="primary">普通</ke-button>
-      <ke-button class="margin" type="success">成功</ke-button>
-      <ke-button class="margin" type="info">信息</ke-button>
-      <ke-button class="margin" type="warning">警告</ke-button>
-      <ke-button class="margin" type="danger">危险</ke-button>\`\`\``,
+      dataList: [
+        {
+          title: "模态框",
+          href: "#modalBox",
+          children: [
+            {
+              title: "普通模态",
+            },
+          ],
+        },
+        {
+          title: "按钮",
+          href: "#btnBox",
+          children: [
+            {
+              title: "普通风格",
+            },
+            {
+              title: "朴素风格",
+            },
+            {
+              title: "反馈风格",
+            },
+            {
+              title: "API",
+            },
+          ],
+        },
+        {
+          title: "按钮",
+          href: "#btnBox",
+          children: [
+            {
+              title: "普通风格",
+            },
+            {
+              title: "朴素风格",
+            },
+            {
+              title: "反馈风格",
+            },
+            {
+              title: "API",
+            },
+          ],
+        },
+        {
+          title: "模态框",
+          href: "#modalBox",
+          children: [
+            {
+              title: "普通模态",
+            },
+          ],
+        },
+        {
+          title: "按钮",
+          href: "#btnBox",
+          children: [
+            {
+              title: "普通风格",
+            },
+            {
+              title: "朴素风格",
+            },
+            {
+              title: "反馈风格",
+            },
+            {
+              title: "API",
+            },
+          ],
+        },
+        {
+          title: "按钮",
+          href: "#btnBox",
+          children: [
+            {
+              title: "普通风格",
+            },
+            {
+              title: "朴素风格",
+            },
+            {
+              title: "反馈风格",
+            },
+            {
+              title: "API",
+            },
+          ],
+        },
+        {
+          title: "模态框",
+          href: "#modalBox",
+          children: [
+            {
+              title: "普通模态",
+            },
+          ],
+        },
+        {
+          title: "按钮",
+          href: "#btnBox",
+          children: [
+            {
+              title: "普通风格",
+            },
+            {
+              title: "朴素风格",
+            },
+            {
+              title: "反馈风格",
+            },
+            {
+              title: "API",
+            },
+          ],
+        },
+        {
+          title: "按钮",
+          href: "#btnBox",
+          children: [
+            {
+              title: "普通风格",
+            },
+            {
+              title: "朴素风格",
+            },
+            {
+              title: "反馈风格",
+            },
+            {
+              title: "API",
+            },
+          ],
+        },
+        {
+          title: "模态框",
+          href: "#modalBox",
+          children: [
+            {
+              title: "普通模态",
+            },
+          ],
+        },
+        {
+          title: "按钮",
+          href: "#btnBox",
+          children: [
+            {
+              title: "普通风格",
+            },
+            {
+              title: "朴素风格",
+            },
+            {
+              title: "反馈风格",
+            },
+            {
+              title: "API",
+            },
+          ],
+        },
+        {
+          title: "按钮",
+          href: "#btnBox",
+          children: [
+            {
+              title: "普通风格",
+            },
+            {
+              title: "朴素风格",
+            },
+            {
+              title: "反馈风格",
+            },
+            {
+              title: "API",
+            },
+          ],
+        },
+      ],
     };
+  },
+  methods: {
+    handleSearch(e) {
+      console.log(e);
+    },
   },
 };
 </script>

@@ -41,7 +41,6 @@
             // 判断有无重复值
           if(!(this.isRepeat(this.dataList, newsVal ))){
             this.dataList.push(newsVal);
-            console.log(this.dataList);
           }
           this.inputVal = ''
         }

@@ -3,17 +3,40 @@ body{
   padding: 0;
   margin: 0;
 }
+
+
+
+ul,ol {
+  list-style: none;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: #232323;
+}
+
+
+
 @media screen and (max-width: 1000px) {
   #app {
    width: 90%;
    margin: 0 auto;
  } 
+ #sidebarContainer {
+  display: none;
+}
 }
 @media screen and (max-width: 800px) {
   #app {
    width: 100%;
    margin: 0 auto;
- } 
+ }
+
 }
 
 /* 代码块 */

@@ -1,5 +1,7 @@
 <template>
   <div class="container">
+    
+    <h3 id="btnBox">#按钮</h3>
     <h3>#普通风格</h3>
     <!-- 组件及代码块 -->
     <CodeBlock :value="value01">
