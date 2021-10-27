@@ -17,7 +17,7 @@
         <ke-button class="margin" type="primary" @click="visible=false" round>确定</ke-button>
         <ke-button class="margin" @click="visible=false" round>关闭</ke-button>
       </template>
-    </ke-dialog>
+      </ke-dialog>
     </CodeBlock>  
   </div>
 </template>

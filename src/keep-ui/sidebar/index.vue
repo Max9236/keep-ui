@@ -1,10 +1,9 @@
 <template>
-  <div id="sidebarContainer" class="test test-5 container">
+  <div id="sidebarContainer" :class=" fixed ? 'isFixed' : '' ">
     <ul class="scrollbar">
       <li v-for="(item, index) in dataList" :key="index">
         <!-- 一级标题 -->
         <a 
-          
           @mouseenter="isActive = index" 
           @mouseleave="isActive = -1"
           @click="isActiveTit = index"
@@ -26,13 +25,17 @@
 
 <script>
 export default {
-  name: 'KeepUiIndex',
+  name: 'KeSidebar',
   props: {
     dataList: {
       type: Array,
       default: function() {
         return []
       }
+    },
+    fixed: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -57,17 +60,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.isFixed {
   position: fixed;
   width: 20%;
   top: 0px;
   left: 0px;
   height: 100vh;
   overflow-y: auto;
-  .childrenItem:hover {
-    color: skyblue;
-    cursor:pointer;
-  }
+}
+.childrenItem:hover {
+  color: skyblue;
+  cursor:pointer;
 }
 a {
   display: inline-block;

@@ -1,25 +1,21 @@
 <template>
-  <div id="app">
-    <SideBar :dataList="dataList" />
-    <h1>keepUI</h1>
-    <h3>#keepUI ,一套基于 Vue 2.0 简约而不简单的webPC端组件库</h3>
-    <DialogGroup />
-    <ButtonGroup />
-    <InputGroup />
-  </div>
+  <ke-layout-document>
+    <template v-slot:left>
+      <ke-sidebar :dataList="dataList" />
+    </template>
+    <template v-slot:right>
+      <LayOut/>
+    </template>
+  </ke-layout-document>
 </template>
 
 <script>
-import InputGroup from "./components/input";
-import ButtonGroup from "./components/button";
-import DialogGroup from "./components/dialog";
-import SideBar from "./components/sidebar";
+import LayOut from './layout.vue'
+import KeLayoutDocument from './keep-ui/layout/ke-layout-document.vue';
 export default {
-  components: {
-    InputGroup,
-    ButtonGroup,
-    DialogGroup,
-    SideBar,
+  components:{
+    LayOut,
+    KeLayoutDocument
   },
   data() {
     return {
@@ -205,20 +201,11 @@ export default {
           ],
         },
       ],
-    };
-  },
-  methods: {
-    handleSearch(e) {
-      console.log(e);
-    },
-  },
+    }
+  }
 };
 </script>
 
-<style>
-#app {
-  padding: 0 30px;
-  width: 60%;
-  margin: 0 auto;
-}
+<style lang="scss" scoped>
+
 </style>

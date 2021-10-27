@@ -1,3 +1,4 @@
+/* 基础样式 */
 html,
 body{
   padding: 0;
@@ -21,23 +22,6 @@ a {
 }
 
 
-
-@media screen and (max-width: 1000px) {
-  #app {
-   width: 90%;
-   margin: 0 auto;
- } 
- #sidebarContainer {
-  display: none;
-}
-}
-@media screen and (max-width: 800px) {
-  #app {
-   width: 100%;
-   margin: 0 auto;
- }
-
-}
 
 /* 代码块 */
 .v-note-show.single-show {
